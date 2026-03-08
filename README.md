@@ -4,6 +4,8 @@ A static blog/journal site built with Vite + React + TypeScript for WDV 463 at F
 
 **Student:** Jason Haire  
 **Course:** WDV 463
+**Site:** https://memory-lane-nine-ashy.vercel.app
+**Repo:** https://github.com/HaireJason-FS/memoryLane
 
 ---
 
