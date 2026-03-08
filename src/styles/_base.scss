@@ -1,0 +1,47 @@
+@use 'variables' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: $bg;
+  color: $text;
+  font-family: $font-sans;
+  font-size: $text-base;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+a {
+  color: $accent-light;
+  text-decoration: none;
+  transition: color $transition;
+
+  &:hover {
+    color: $accent;
+  }
+}
+
+// ── Tag pill ──────────────────────────────────────────────
+.tag {
+  display: inline-block;
+  font-size: $text-xs;
+  font-weight: 600;
+  color: $accent-light;
+  background: $accent-dim;
+  border: 1px solid rgba($accent, 0.3);
+  border-radius: 99px;
+  padding: $space-1 $space-3;
+  letter-spacing: 0.02em;
+}

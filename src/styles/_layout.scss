@@ -1,0 +1,84 @@
+@use 'variables' as *;
+
+// ── Wrapper ───────────────────────────────────────────────
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+// ── Header ────────────────────────────────────────────────
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba($bg, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid $border;
+
+  &__inner {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: $space-4 $space-6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__brand {
+    font-size: $text-lg;
+    font-weight: 700;
+    color: $text;
+    letter-spacing: -0.02em;
+
+    span {
+      color: $accent;
+    }
+
+    &:hover {
+      color: $text;
+    }
+  }
+}
+
+// ── Nav ───────────────────────────────────────────────────
+.site-nav {
+  display: flex;
+  gap: $space-4;
+
+  &__link {
+    font-size: $text-sm;
+    font-weight: 500;
+    color: $text-muted;
+    padding: $space-1 $space-2;
+    border-radius: $radius-sm;
+    transition: color $transition, background $transition;
+
+    &:hover,
+    &.active {
+      color: $text;
+      background: rgba(255, 255, 255, 0.05);
+    }
+  }
+}
+
+// ── Main content ──────────────────────────────────────────
+.site-main {
+  flex: 1;
+  max-width: $max-width;
+  width: 100%;
+  margin: 0 auto;
+  padding: $space-12 $space-6;
+}
+
+// ── Footer ────────────────────────────────────────────────
+.site-footer {
+  border-top: 1px solid $border;
+  padding: $space-6;
+  text-align: center;
+
+  p {
+    font-size: $text-sm;
+    color: $text-muted;
+  }
+}

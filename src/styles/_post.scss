@@ -1,0 +1,120 @@
+@use 'variables' as *;
+
+// ── Individual post ───────────────────────────────────────
+.post {
+  &__header {
+    margin-bottom: $space-8;
+    padding-bottom: $space-8;
+    border-bottom: 1px solid $border;
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: $space-2;
+    font-size: $text-xs;
+    color: $text-muted;
+    margin-bottom: $space-4;
+    font-variant-numeric: tabular-nums;
+  }
+
+  &__title {
+    font-size: $text-4xl;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.04em;
+    color: $text;
+    margin-bottom: $space-4;
+  }
+
+  &__excerpt {
+    font-size: $text-lg;
+    color: $text-muted;
+    line-height: 1.6;
+    margin-bottom: $space-4;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-2;
+  }
+
+  &__body {
+    color: $text-muted;
+    font-size: $text-base;
+    line-height: 1.85;
+
+    p {
+      margin-bottom: $space-6;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    code {
+      font-family: $font-mono;
+      font-size: 0.9em;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid $border;
+      border-radius: $radius-sm;
+      padding: 0.1em 0.4em;
+    }
+  }
+
+  &__footer {
+    margin-top: $space-12;
+    padding-top: $space-8;
+    border-top: 1px solid $border;
+  }
+
+  &__back {
+    font-size: $text-sm;
+    font-weight: 600;
+    color: $text-muted;
+    transition: color $transition;
+
+    &:hover {
+      color: $accent-light;
+    }
+  }
+}
+
+// ── 404 page ──────────────────────────────────────────────
+.not-found {
+  text-align: center;
+  padding: $space-16 0;
+
+  &__code {
+    display: block;
+    font-size: 6rem;
+    font-weight: 800;
+    line-height: 1;
+    color: $text-faint;
+    letter-spacing: -0.06em;
+    margin-bottom: $space-4;
+  }
+
+  h1 {
+    font-size: $text-2xl;
+    font-weight: 700;
+    color: $text;
+    margin-bottom: $space-3;
+  }
+
+  p {
+    color: $text-muted;
+    margin-bottom: $space-8;
+  }
+
+  &__link {
+    font-size: $text-sm;
+    font-weight: 600;
+    color: $accent-light;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+}
