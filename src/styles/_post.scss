@@ -2,6 +2,21 @@
 
 // ── Individual post ───────────────────────────────────────
 .post {
+  &__hero {
+    width: 100%;
+    margin-bottom: $space-8;
+    border-radius: $radius;
+    overflow: hidden;
+    border: 1px solid $border;
+  }
+
+  &__hero-img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+  }
+
   &__header {
     margin-bottom: $space-8;
     padding-bottom: $space-8;
@@ -60,6 +75,52 @@
       border: 1px solid $border;
       border-radius: $radius-sm;
       padding: 0.1em 0.4em;
+    }
+  }
+
+  &__sources {
+    margin-top: $space-12;
+    padding: $space-6;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid $border;
+    border-radius: $radius;
+  }
+
+  &__sources-heading {
+    font-size: $text-xs;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: $text-muted;
+    margin-bottom: $space-4;
+  }
+
+  &__sources-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: $space-2;
+
+    li {
+      font-size: $text-sm;
+      color: $text-muted;
+
+      &::before {
+        content: '→';
+        margin-right: $space-2;
+        color: $text-faint;
+      }
+    }
+
+    a {
+      color: $accent-light;
+      text-decoration: none;
+      transition: color $transition;
+
+      &:hover {
+        color: $accent;
+        text-decoration: underline;
+      }
     }
   }
 

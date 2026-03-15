@@ -4,11 +4,19 @@
 .archive {
   &__header {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: $space-4;
     margin-bottom: $space-8;
     padding-bottom: $space-6;
     border-bottom: 1px solid $border;
+  }
+
+  &__heading {
+    display: flex;
+    align-items: baseline;
+    gap: $space-3;
 
     h1 {
       font-size: $text-3xl;
@@ -23,10 +31,47 @@
     }
   }
 
+  &__sort {
+    display: flex;
+    gap: 2px;
+    background: $bg-card;
+    border: 1px solid $border;
+    border-radius: $radius;
+    padding: 3px;
+  }
+
   &__list {
     display: flex;
     flex-direction: column;
     gap: $space-4;
+  }
+}
+
+// ── Sort toggle ──────────────────────────────────────────
+.sort-btn {
+  padding: 0.3rem 0.85rem;
+  border: none;
+  border-radius: calc($radius - 2px);
+  background: transparent;
+  color: $text-muted;
+  font-size: $text-sm;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background $transition, color $transition;
+
+  &:hover {
+    color: $text;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  &--active {
+    background: $accent;
+    color: #fff;
+
+    &:hover {
+      background: $accent;
+      color: #fff;
+    }
   }
 }
 

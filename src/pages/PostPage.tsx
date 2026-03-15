@@ -12,6 +12,11 @@ export default function PostPage() {
 
   return (
     <article className="post">
+      {post.image && (
+        <div className="post__hero">
+          <img src={post.image} alt={post.title} className="post__hero-img" />
+        </div>
+      )}
       <header className="post__header">
         <div className="post__meta">
           <time dateTime={post.date}>{formatDate(post.date)}</time>
@@ -36,6 +41,21 @@ export default function PostPage() {
           <p key={i}>{paragraph}</p>
         ))}
       </div>
+
+      {post.sources && post.sources.length > 0 && (
+        <aside className="post__sources">
+          <h2 className="post__sources-heading">Sources</h2>
+          <ul className="post__sources-list">
+            {post.sources.map((source) => (
+              <li key={source.url}>
+                <a href={source.url} target="_blank" rel="noopener noreferrer">
+                  {source.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </aside>
+      )}
 
       <footer className="post__footer">
         <Link to="/" className="post__back">
