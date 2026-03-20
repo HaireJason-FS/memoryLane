@@ -219,4 +219,40 @@ For all the change in tooling, the Stack Overflow data makes one thing clear: th
       { label: "Second Talent — AI Coding Assistant Statistics & Trends 2025", url: "https://www.secondtalent.com/resources/ai-coding-assistant-statistics/" },
     ],
   },
+  // SmithForgd Group Blog Post
+  {
+    id: "building-sfg-side-project",
+    title: "What I Learned Building My SFG Platform",
+    date: "2026-03-20",
+    excerpt:
+      "What started as a small idea for building client websites evolved into a modular system — and taught me more than any single assignment could.",
+    tags: ["projects", "architecture", "learning", "webdev"],
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&q=80",
+    body: `
+    One of the most impactful things I've worked on recently is a side project called SmithForgd Group (SFG). What started as a simple idea to build websites for clients quickly evolved into something much larger — a modular platform designed to support multiple types of businesses through a single system.
+
+    Instead of building a completely different solution for each client, the goal of SFG is to create reusable systems that can adapt to different industries. For example, a service-based business can manage leads, jobs, and invoices, while a retail business can manage products and storefronts. Over time, this idea expanded into thinking about scalability, structure, and long-term maintainability.
+
+    Planning became more important than coding.
+
+    Early on, I focused heavily on building features. I wanted to see things working quickly. But as the project grew, I realized that without a solid structure, everything became harder to manage. I had to step back and think about how different parts of the system connect. That shift — from just coding to actually planning — made a huge difference in how I approached development.
+
+    Simplicity is powerful.
+
+    Another major lesson was learning not to over complicate things too early. It's easy to try to build a “perfect” system from the start, especially when thinking about real-world applications. But I found that starting simple and iterating over time leads to better results. Each version improves naturally instead of becoming overwhelming.
+
+    Real projects expose real problems.
+
+    Working on SFG introduced challenges that don't usually appear in smaller assignments. Organizing code across multiple features, maintaining consistency in design, and thinking about how users actually interact with the system all became important. These are things that are hard to fully understand until you're building something that grows over time.
+
+    Connecting school to real-world development.
+
+    This project helped bridge the gap between what I learn in class and how things work in real-world development. Concepts like routing, APIs, and deployment became much clearer when applied to something I was actively building. It made the learning process more meaningful because I could immediately see how everything connects.
+
+    Final thoughts.
+
+    SFG is still evolving, but even in its current state, it has been one of the most valuable learning experiences so far. It represents the direction I want to continue growing in as a developer — building systems that are not only functional, but scalable and adaptable over time.
+    `.trim(),
+    sources: [],
+  }
 ];
