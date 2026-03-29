@@ -254,5 +254,35 @@ For all the change in tooling, the Stack Overflow data makes one thing clear: th
     SFG is still evolving, but even in its current state, it has been one of the most valuable learning experiences so far. It represents the direction I want to continue growing in as a developer — building systems that are not only functional, but scalable and adaptable over time.
     `.trim(),
     sources: [],
-  }
+  },
+  // Authentication Post
+  {
+  id: "understanding-authentication-flow",
+  title: "Understanding Authentication Flow in Modern Web Applications",
+  date: "2026-03-29",
+  excerpt:
+    "Authentication is more than just logging in — it’s a full process that ensures users can securely access the right data at the right time.",
+  tags: ["authentication", "security", "webdev", "concepts"],
+  image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1200&q=80",
+  body: `
+Authentication is a core part of nearly every modern web application. While logging in may seem simple from a user’s perspective, there is actually a full process happening behind the scenes to verify identity and control access. This process is known as the authentication flow.
+
+At a high level, authentication flow is the sequence of steps that occurs when a user attempts to log in and access protected parts of an application.
+
+The process begins when a user enters their credentials, typically a username/email and password. These credentials are sent to the server, where they are validated. Instead of storing plain text passwords, applications compare hashed versions of the password for security.
+
+If the credentials are valid, the server generates some form of proof of authentication. This is often a session or a token. Tokens, such as JSON Web Tokens (JWTs), are commonly used in modern applications because they allow the client to store authentication data and send it with future requests.
+
+Once authenticated, the client includes this token in subsequent requests, usually in the headers. The server then verifies the token before allowing access to protected routes or data. If the token is missing, invalid, or expired, access is denied.
+
+One important part of authentication flow is authorization. Authentication answers the question, “Who are you?” while authorization answers, “What are you allowed to do?” Even after logging in, a user may only have access to certain resources depending on their role or permissions.
+
+Understanding authentication flow helped me better understand how secure applications are built. Concepts like protected routes, middleware, and token validation became much clearer when I saw how each step connects in the full process.
+
+In real-world development, implementing authentication correctly is critical. Small mistakes can lead to security vulnerabilities, which is why developers must carefully design and test each part of the flow.
+
+Overall, authentication flow is a foundational concept that connects many areas of web development, from frontend forms to backend validation and security practices.
+  `.trim(),
+  sources: [],
+}
 ];
